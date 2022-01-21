@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}月銷售額{% endblock title%}
+{% block content%}
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">銷售分析－月銷售額</h1>
+
+<!-- Content Row -->
+<div class="row">
+
+    <div class="col-xl-8 col-lg-7">
+
+        <!-- Bar Chart -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">2021</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-bar">
+                    <canvas id="MonthBarChart1"></canvas>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+
+        <!-- Bar Chart -->
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">2020</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-bar">
+                    <canvas id="MonthBarChart2"></canvas>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+
+        <!-- Bar Chart -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">2019</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-bar">
+                    <canvas id="MonthBarChart3"></canvas>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock content%}
+{% block js %}
+<script src="{{ url_for('static', filename='js/demo/chart-Mbar-demo.js') }}"></script>
+{% endblock js %}

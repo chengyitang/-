@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block title %}庫存管理{% endblock title %}
+{% block content %}
+<!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">庫存管理－主要原料</h1>
+
+<!-- Content Row -->
+<div class="row">
+
+    <!-- 黃銅 Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 ml-3">
+                        <div class="h4 mb-0 font-weight-bold text-warning mb-2">黃銅</div>
+                        <div class="h5 mb-0 text-gray-800">ID: 1</div>
+                        <div class="h5 mb-0 text-gray-800">庫存量: 20000</div>
+                    </div>
+                    <div class="col-auto mr-3">
+                        <img class="img-profile rounded-circle" src="{{ url_for('static', filename='img/brass.jpg') }}" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Area Chart -->
+    <div class="col-xl-8 col-lg-7 mb-5">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">黃銅過去庫存量</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="brassAreaChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">庫存管理－次要原料</h1>
+
+<!-- Content Row -->
+<div class="row">
+
+    <!-- 鐵 Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-secondary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 ml-3">
+                        <div class="h4 mb-0 font-weight-bold text-secondary mb-2">鐵</div>
+                        <div class="h5 mb-0 text-gray-800">ID: 2</div>
+                        <div class="h5 mb-0 text-gray-800">庫存量: 123</div>
+                    </div>
+                    <div class="col-auto mr-3">
+                        <img class="img-profile rounded-circle" src="{{ url_for('static', filename='img/iron.jpeg') }}" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 不鏽鋼 Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-dark shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 ml-3">
+                        <div class="h4 mb-0 font-weight-bold text-dark mb-2">不鏽鋼</div>
+                        <div class="h5 mb-0 text-gray-800">ID: 3</div>
+                        <div class="h5 mb-0 text-gray-800">庫存量: 456</div>
+                    </div>
+                    <div class="col-auto mr-3">
+                        <img class="img-profile rounded-circle" src="{{ url_for('static', filename='img/steel.jpg') }}" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 塑料 Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-danger shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 ml-3">
+                        <div class="h4 mb-0 font-weight-bold text-danger mb-2">塑料</div>
+                        <div class="h5 mb-0 text-gray-800">ID: 4</div>
+                        <div class="h5 mb-0 text-gray-800">庫存量: 3649</div>
+                    </div>
+                    <div class="col-auto mr-3">
+                        <img class="img-profile rounded-circle" src="{{ url_for('static', filename='img/plastic.png') }}" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 陶瓷 Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 ml-3">
+                        <div class="h4 mb-0 font-weight-bold text-primary mb-2">陶瓷</div>
+                        <div class="h5 mb-0 text-gray-800">ID: 5</div>
+                        <div class="h5 mb-0 text-gray-800">庫存量: 4739</div>
+                    </div>
+                    <div class="col-auto mr-3">
+                        <img class="img-profile rounded-circle" src="{{ url_for('static', filename='img/china.jpg') }}" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 玻璃 Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 ml-3">
+                        <div class="h4 mb-0 font-weight-bold text-info mb-2">玻璃</div>
+                        <div class="h5 mb-0 text-gray-800">ID: 6</div>
+                        <div class="h5 mb-0 text-gray-800">庫存量: 264</div>
+                    </div>
+                    <div class="col-auto mr-3">
+                        <img class="img-profile rounded-circle" src="{{ url_for('static', filename='img/glass.jpg') }}" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 玉石 Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 ml-3">
+                        <div class="h4 mb-0 font-weight-bold text-success mb-2">玉石</div>
+                        <div class="h5 mb-0 text-gray-800">ID: 7</div>
+                        <div class="h5 mb-0 text-gray-800">庫存量: 328</div>
+                    </div>
+                    <div class="col-auto mr-3">
+                        <img class="img-profile rounded-circle" src="{{ url_for('static', filename='img/jade.jpg') }}" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 水晶 Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2 ml-3">
+                        <div class="h4 mb-0 font-weight-bold text-warning mb-2">水晶</div>
+                        <div class="h5 mb-0 text-gray-800">ID: 8</div>
+                        <div class="h5 mb-0 text-gray-800">庫存量: 12</div>
+                    </div>
+                    <div class="col-auto mr-3">
+                        <img class="img-profile rounded-circle" src="{{ url_for('static', filename='img/crystal.png') }}" width="100px" height="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
+{% block js %}
+<script src="{{ url_for('static', filename='js/demo/chart-area-brass.js') }}"></script>
+{% endblock js %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}年銷售額{% endblock title %}
+{% block content %}
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">銷售分析－年銷售額</h1>
+
+<!-- Content Row -->
+<div class="row">
+
+    <div class="col-xl-8 col-lg-7">
+
+        <!-- Bar Chart -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">近三年年銷售額 (2019~2021)</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-bar">
+                    <canvas id="YearBarChart"></canvas>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock content %}
+{% block js %}
+<script src="{{ url_for('static', filename='js/demo/chart-Ybar-demo.js') }}"></script>
+{% endblock js %}

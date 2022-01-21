@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}顧客分群{% endblock title %}
+{% block content %}
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">顧客分析－顧客分群</h1>
+<p>此頁分析基於資料庫中2021 7~9月 之歷史資料</p>
+
+<!-- Content Row -->
+<div class="row">
+
+    <div class="col-xl-8 col-lg-7">
+
+        <!-- Bubble Chart -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">K-Means 顧客分群泡泡圖</h6>
+            </div>
+            <div class="card-body">
+                <div>
+                    <script type="text/javascript">window.PlotlyConfig = { MathJaxConfig: 'local' };</script>
+                    <script src="{{ url_for('static', filename='js/demo/bubble-part1.js') }}"></script>
+                    <div id="247d02c9-c253-491d-bb3e-e1b8c61853ca" class="plotly-graph-div"
+                        style="height:100%; width:100%;"></div>
+                    <script src="{{ url_for('static', filename='js/demo/bubble-part2.js') }}"></script>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Donut Chart -->
+    <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">顧客地區分布</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="chart-pie pt-4">
+                    <canvas id="myPieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <p class="mb-4">
+                            x軸：Frequency，愈靠右邊代表該群愈常來消費。<br>        
+                            y軸：Average Transaction Amount，愈靠上方代表該群平均消費金額愈大。<br>                       
+                            泡泡大小：營收貢獻，泡泡愈大代表該群消費金額愈大。<br>     
+                            泡泡數字：群的大小，數字愈大代表愈多人屬於該群。<br>                       
+                            泡泡顏色：Recency，愈偏向黃色代表該群顧客很久沒來消費了。
+                        </p> -->
+
+</div>
+{% endblock content %}
+{% block js %}
+<script src="{{ url_for('static', filename='js/demo/chart-pie-location-demo.js') }}"></script>
+{% endblock js %}

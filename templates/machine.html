@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}生產機器排程{% endblock title %}
+{% block content %}
+<!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">生產機器排程</h1>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">2022年1月 生產機器排程</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Machine</th>
+                        {% for i in range(1, 32) %}
+                        <th>{{ '{0:02d}'.format(i) }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(1, 31) %}
+                    <tr>
+                        <!-- ID -->
+                        <td>{{ i }}</td>
+                        <!-- Machine -->
+                        {% if i in range(1, 7) %}
+                        <td>Bar</td>
+                        {% elif i in range(7, 19) %}
+                        <td>CNC</td>
+                        {% elif i in range(19, 25) %}
+                        <td>Surface</td>
+                        {% else %}
+                        <td>Packing</td>
+                        {% endif %}
+                        <!-- Schedule -->
+                        {% for day in range(1, 32) %}
+                            {% if day in schedules[i-1] %}
+                                {% if day > today %}
+                                <td bgcolor="#DCDCDC"></td>
+                                {% else %}
+                                <td bgcolor="gray"></td>
+                                {% endif %}
+                            {% else %}
+                            <td></td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}
