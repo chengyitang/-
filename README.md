@@ -1,7 +1,7 @@
-<h2 align="left">TY Production & Marketing Information System</h2>
+## TY Production & Marketing Information System
 [Tah Yang Machine Works., Ltd (TY)](https://www.tah-yang.com/)
 
-<h4 align="left">Functions:</h4>
+### Functions:
 - Machine scheduling
 - Inventory management
 - Sales analysis
