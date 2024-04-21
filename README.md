@@ -1,2 +1,19 @@
-# Course Project: Tah Yang Production & Marketing Information Systems
-將顧客管理與作業管理相關理論實現於以大陽水龍頭精機廠為主題所開發的產銷資訊系統中。
+## TY Production & Marketing Information System
+[Tah Yang Machine Works., Ltd (TY)](https://www.tah-yang.com/)
+
+##### Provided Functions:
+- Machine scheduling
+- Inventory management
+- Sales analysis
+- Customer analysis
+    - Lifetime value calculation
+    - RFM analysis with K-means clustering w/ Plotly
+- Data query
+- Order tracking (for customers)
+
+##### Developing tools:
+- Flask
+- MySQL
+- JavaScript
+- HTML/CSS
+
