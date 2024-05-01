@@ -3,18 +3,22 @@
 
 [Chinese Document PDF](https://drive.google.com/file/d/11yxnuldgsGr8XpPK0hQjB0iZSc4JaA9G/view?usp=sharing)
 
-** Due to the end of free deployment service of Heroku, our Heroku-based MySQL database schemas and website lost some functions. **
+**Due to the end of free deployment service of Heroku, our Heroku-based MySQL database schemas and website lost some functions.**
 
 ### Functions:
 - #### Machine scheduling
 - #### Inventory management
+<p align="left"><img src="/inventory.png" alt="inventory"/></p>
+
 - #### Sales analysis
+<p align="left"><img src="/sales_mth.png" alt="sales_yr"/></p>
+<p align="left"><img src="/sales_qtr.png" alt="inventory"/></p>
+<p align="left"><img src="/sales_yr.png" alt="inventory"/></p>
+
 - #### Customer analysis
     - #### Lifetime value calculation
     - #### RFM analysis with K-means clustering w/ Plotly
-<p align="left">
-  <img src="/k-means RFM.png" alt="rfm"/>
-</p>
+<p align="left"><img src="/k-means RFM.png" alt="rfm"/></p>
 
 - #### Data query
 - #### Order tracking (for customers)
