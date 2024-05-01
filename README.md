@@ -13,7 +13,7 @@ Due to the end of free deployment service of Heroku, our Heroku-based MySQL data
     - Lifetime value calculation
     - RFM analysis with K-means clustering w/ Plotly
 <p align="center">
-  <img src="/k-means RFM.png" alt="animated" />
+  <img src="/k-means RFM.png" alt="rfm" width="80"/>
 </p>
 - Data query
 - Order tracking (for customers)
