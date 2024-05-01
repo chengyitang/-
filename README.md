@@ -3,6 +3,8 @@
 
 [Chinese Document PDF](https://drive.google.com/file/d/11yxnuldgsGr8XpPK0hQjB0iZSc4JaA9G/view?usp=sharing)
 
+Due to the end of free deployment service of Heroku, our Heroku-based MySQL database schemas and website lost some functions.
+
 ### Functions:
 - Machine scheduling
 - Inventory management
@@ -10,6 +12,7 @@
 - Customer analysis
     - Lifetime value calculation
     - RFM analysis with K-means clustering w/ Plotly
+      <img src="https://drive.google.com/file/d/1tv-zvrJBM9N-KqREC2Eo4zbTyTCCubYi/view?usp=sharing" width="50%">
 - Data query
 - Order tracking (for customers)
 
